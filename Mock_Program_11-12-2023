@@ -1,0 +1,129 @@
+Q3. Write a Java program to print a right-angled triangle of stars. The number of rows should be taken as input.
+
+
+package jdbcpackage;
+
+public class RightAngledTriangleProgram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		for(int i = 1; i<=5; i++) {
+			for(int j=1; j<=i; j++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+
+	}
+
+}
+
+Output:- 
+* 
+* * 
+* * * 
+* * * * 
+* * * * *
+
+Q2.  Write a Java function to check if two strings are anagrams of each other.
+
+package jdbcpackage;
+import java.util.*;
+public class StringProgram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter first String value:");
+		String x = sc.next();
+		
+		System.out.println("Enter second String value:");
+		String y = sc.next();
+		
+		char a[]=x.toCharArray();
+		char b[]=y.toCharArray();
+		
+		Arrays.sort(a);
+		Arrays.sort(b);
+		
+		boolean result=Arrays.equals(a, b);
+		
+		if(result==true) {
+			System.out.println("Strings are anagram");
+		}
+		else {
+			System.out.println("Strings are not anagram");
+		}
+
+	}
+
+}
+
+Output:-
+Enter first String value:
+LISTEN
+Enter second String value:
+SILENT
+Strings are anagram
+
+
+Q1.  Given an array of integers, write a Java program to find and print all the duplicate elements.
+
+package jdbcpackage;
+import java.util.Scanner;
+public class ArrayProgram {
+
+
+
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("enter size of array N");
+			int N=sc.nextInt();
+			
+			int array1[] = new int[N];
+			System.out.println("enter the elements of array");
+			
+			for(int i = 0; i < N; i++) {
+				
+				array1[i] = sc.nextInt();
+				
+			}
+			
+			for(int i = 0; i<array1.length; i++) {
+				int count = 0;
+				for(int j=0; j<array1.length-1; j++) {
+					if(array1[i]==array1[j]) {
+						count=count+1;
+					}
+					if(count>1) {
+						System.out.println(array1[i]);
+						break;
+						
+					}
+				}
+			}
+		}
+
+	}
+
+Output:- 
+enter size of array N
+8
+enter the elements of array
+1
+2
+2
+3
+5
+5
+8
+9
+
+2
+2
+5
+5
